@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buy me</title>
+    <link rel="icon" type="image/png" href="BuymeIcon.png">
+    <link rel="stylesheet" href="styles.css"> <!-- Link to external CSS -->
+</head>
+<body>
+    <header>
+        <h1 id="buyme">Buy me</h1>
+        <ul class="nav-links">
+            <li><a href="#" class="active">Home</a></li>
+            <li><a href="#">Cart</a></li>
+            <li><a href="#">Wishcard</a></li>
+            <li><a href="#" >Login</a></li>
+            <li><a href="#">Wishcard</a></li>
+          </ul>
+
+        <!---<div class="search-bar">
+            <input type="text" id="search" placeholder="Search products..." onkeyup="filterProducts()">
+            <button onclick="filterProducts()">Search</button>
+        </div>--->
+        <div class="cart" onclick="showCartPage()">
+            🛒 Cart <span id="cart-count">0</span>
+        </div>
+        <div class="wishlist" onclick="showWishlist()">
+            ❤️ Wishlist <span id="wishlist-count">0</span>
+        </div>
+    </header>
+
+    <!-- Main Product Page -->
+     <div id="p1">
+     <h1 id="i1">Cricket Sports Equipment</h1>
+     <select id="sort" onchange="sortProducts()">
+        <option value="">Sort By</option>
+        <option value="price-asc">Price: Low to High</option>
+        <option value="price-desc">Price: High to Low</option>
+    </select>
+     </div>
+    <section class="products" id="shop-page">
+        <div class="product" id="product1">
+            <img src="https://cricketershop.com/cdn/shop/files/Shop_the_look_2.jpg?v=1728279647&width=2400" alt="Product 1" width="500px" height="290px">
+            <h3>Canon DSLR Camera</h3>
+            <p>$999.99</p>
+            <button class="add-to-cart" data-name="canon-dslr-camera-dark-surface_36682-265867" data-price="999.99">Add to Cart</button>
+            <button class="add-to-wishlist" onclick="addToWishlist('Product 1')">❤️</button>
+        </div>
+
+        <div class="product" id="product2">
+            <img src="https://5.imimg.com/data5/SELLER/Default/2024/4/410707240/ZC/CG/KT/3431707/cricket-sports-equipment-500x500.jpg" alt="Product 2" width="300px" height="190px">
+            <h3>Sony Camera</h3>
+            <p>$799.99</p>
+            <button class="add-to-cart" data-name="Sony Camera" data-price="799.99">Add to Cart</button>
+            <button class="add-to-wishlist" onclick="addToWishlist('Product 1')">❤️</button>
+        </div>
+        <div class="product" id="product2">
+            <img src="https://championsports.pk/wp-content/uploads/2024/01/1000052812-2.jpg" alt="Product 2" width="300px" height="190px">
+            <h3>Sony Camera</h3>
+            <p>$799.99</p>
+            <button class="add-to-cart" data-name="Sony Camera" data-price="799.99">Add to Cart</button>
+            <button class="add-to-wishlist" onclick="addToWishlist('Product 1')">❤️</button>
+        </div>
+        <div class="product" id="product2">
+            <img src="https://www.bigvalueshop.com/wp-content/uploads/2020/04/SS-English-Willow-Cricket-Kit-300x300.jpg" alt="Product 2" width="300px" height="190px">
+            <h3>Sony Camera</h3>
+            <p>$799.99</p>
+            <button class="add-to-cart" data-name="Sony Camera" data-price="799.99">Add to Cart</button>
+            <button class="add-to-wishlist" onclick="addToWishlist('Product 1')">❤️</button>
+        </div>
+        <div class="product" id="product2">
+            <img src="https://m.media-amazon.com/images/I/51uDz-BJ7jS._AC_UF894,1000_QL80_.jpg" alt="Product 2" width="300px" height="190px">
+            <h3>Sony Camera</h3>
+            <p>$799.99</p>
+            <button class="add-to-cart" data-name="Sony Camera" data-price="799.99">Add to Cart</button>
+            <button class="add-to-wishlist" onclick="addToWishlist('Product 1')">❤️</button>
+        </div>
+        
+        <div class="product" id="product2">
+            <img src="https://www.khelmart.com/pub/media/catalog/product/cache/712b931dac1b924a11d1b7282ad89910/1/2/12_4_1.jpg" alt="Product 2" width="300px" height="190px">
+            <h3>Sony Camera</h3>
+            <p>$799.99</p>
+            <button class="add-to-cart" data-name="Sony Camera" data-price="799.99">Add to Cart</button>
+            <button class="add-to-wishlist" onclick="addToWishlist('Product 1')">❤️</button>
+        </div>
+
+        <div class="product" id="product2">
+            <img src="https://www.jiomart.com/images/product/original/rvgo65rfvz/cw_eck_bs6_179-product-images-orvgo65rfvz-p591116094-0-202202260432.jpg?im=Resize=(420,420)" alt="Product 2" width="300px" height="190px">
+            <h3>Sony Camera</h3>
+            <p>$799.99</p>
+            <button class="add-to-cart" data-name="Sony Camera" data-price="799.99">Add to Cart</button>
+            <button class="add-to-wishlist" onclick="addToWishlist('Product 1')">❤️</button>
+
+        </div>
+        <div class="product" id="product2">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQDeNxoOlf8uPws75mr1zbufNbjvk1A0xW2tw&s" alt="Product 2" width="300px" height="190px">
+            <h3>Sony Camera</h3>
+            <p>$799.99</p>
+            <button class="add-to-cart" data-name="Sony Camera" data-price="799.99">Add to Cart</button>
+            <button class="add-to-wishlist" onclick="addToWishlist('Product 1')">❤️</button>
+        </div>
+
+        <div class="product" id="product2">
+            <img src="https://m.media-amazon.com/images/I/81RWZLQsEkL._AC_UF1000,1000_QL80_.jpg" alt="Product 2" width="300px" height="190px">
+            <h3>Sony Camera</h3>
+            <p>$799.99</p>
+            <button class="add-to-cart" data-name="Sony Camera" data-price="799.99">Add to Cart</button>
+            <button class="add-to-wishlist" onclick="addToWishlist('Product 1')">❤️</button>
+        </div>
+
+        <div class="product" id="product2">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQnILYLAl_O73NxL0yW-GOvxcB8jf8srJHAuQ&s" alt="Product 2" width="300px" height="190px">
+            <h3>Sony Camera</h3>
+            <p>$799.99</p>
+            <button class="add-to-cart" data-name="Sony Camera" data-price="799.99">Add to Cart</button>
+            <button class="add-to-wishlist" onclick="addToWishlist('Product 1')">❤️</button>
+        </div>
+
+        <div class="product" id="product2">
+            <img src="https://m.media-amazon.com/images/I/71QS98E2EuL.jpg" alt="Product 2" width="300px" height="190px">
+            <h3>Sony Camera</h3>
+            <p>$799.99</p>
+            <button class="add-to-cart" data-name="Sony Camera" data-price="799.99">Add to Cart</button>
+            <button class="add-to-wishlist" onclick="addToWishlist('Product 1')">❤️</button>
+        </div>
+
+        <div class="product" id="product2">
+            <img src="https://rukminim3.flixcart.com/image/850/1000/xif0q/kit/a/z/f/hitman-rohit-sharma-full-size-ideal-for-15-21-years-complete-original-imah97m96khdwubt.jpeg?q=90&crop=false" alt="Product 2" width="300px" height="190px">
+            <h3>Sony Camera</h3>
+            <p>$799.99</p>
+            <button class="add-to-cart" data-name="Sony Camera" data-price="799.99">Add to Cart</button>
+            <button class="add-to-wishlist" onclick="addToWishlist('Product 1')">❤️</button>
+        </div>
+
+        <div class="product" id="product2">
+            <img src="https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_2000,h_2000/global/054548/11/fnd/IND/fmt/png/PUMA-x-Royal-Challengers-Bangalore-Cricket-Kit" alt="Product 2" width="300px" height="190px">
+            <h3>Sony Camera</h3>
+            <p>$799.99</p>
+            <button class="add-to-cart" data-name="Sony Camera" data-price="799.99">Add to Cart</button>
+            <button class="heart" onclick="addToWishlist('Product 1')">❤️</button>
+        </div>
+
+        <div class="product" id="product2">
+            <img src="https://rukminim2.flixcart.com/image/850/1000/jpinjbk0/kit/r/d/d/complete-kit-cricket-kit-rrckb01-red-rock-original-imafbq7wmrjbbgjh.jpeg?q=90&crop=false" alt="Product 2" width="300px" height="190px">
+            <h3>Sony Camera</h3>
+            <p>$799.99</p>
+            <button class="add-to-cart" data-name="Sony Camera" data-price="799.99">Add to Cart</button>
+            <button class="add-to-wishlist" onclick="addToWishlist('Product 1')">❤️</button>
+        </div>
+
+        <div class="product" id="product2">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTUkm90pdc9SDnw12zvGTL0-xoIYOJj-zKAvA&s" alt="Product 2" width="300px" height="190px">
+            <h3>Sony Camera</h3>
+            <p>$799.99</p>
+            <button class="add-to-cart" data-name="Sony Camera" data-price="799.99">Add to Cart</button>
+            <button class="add-to-wishlist" onclick="addToWishlist('Product 1')">❤️</button>
+        </div>
+
+        <!-- Add more products as needed -->
+    </section>
+
+
+ <div id="p2">
+    <div id="pad1">
+        <h1>Makeup Set</h1>
+        <select id="sort" onchange="sortProducts()">
+            <option value="">Sort By</option>
+            <option value="price-asc">Price: Low to High</option>
+            <option value="price-desc">Price: High to Low</option>
+        </select>
+
+    <section class="product1" id="shop-page1">
+        <div class="product" id="product11">
+            <img src="https://img.freepik.com/free-vector/realistic-cosmetic-products-sale-advertisement_23-2148231284.jpg" alt="Product 1" width="300px" height="190px">
+            <h3>Canon DSLR Camera</h3>
+            <p>$999.99</p>
+            <button class="add-to-cart" data-name="Canon DSLR Camera" data-price="999.99">Add to Cart</button>
+            <button class="add-to-wishlist" onclick="addToWishlist('Product 1')">❤️</button>
+        </div>
+
+        <div class="product" id="product11">
+            <img src="https://img.freepik.com/free-vector/realistic-beauty-offer-sale-banner-template_52683-94984.jpg" alt="Product 1" width="300px" height="190px">
+            <h3>Canon DSLR Camera</h3>
+            <p>$999.99</p>
+            <button class="add-to-cart" data-name="Canon DSLR Camera" data-price="999.99">Add to Cart</button>
+            <button class="add-to-wishlist" onclick="addToWishlist('Product 1')">❤️</button>
+        </div>
+
+        <div class="product" id="product11">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRzyb8qKbAIQqxwuywKer-rrAGXz1WGDJ43y6fEYfjRSWkmurakI8oDfpRy9LrtZhpfngk&usqp=CAU" alt="Product 1" width="300px" height="190px">
+            <h3>Canon DSLR Camera</h3>
+            <p>$999.99</p>
+            <button class="add-to-cart" data-name="Canon DSLR Camera" data-price="999.99">Add to Cart</button>
+            <button class="add-to-wishlist" onclick="addToWishlist('Product 1')">❤️</button>
+        </div>
+
+        <div class="product" id="product11">
+            <img src="https://static.india.com/wp-content/uploads/2023/07/close-up-collection-make-up-beauty-products.jpg?impolicy=Medium_Widthonly&w=400" alt="Product 1" width="300px" height="190px">
+            <h3>Canon DSLR Camera</h3>
+            <p>$999.99</p>
+            <button class="add-to-cart" data-name="Canon DSLR Camera" data-price="999.99">Add to Cart</button>
+            <button class="add-to-wishlist" onclick="addToWishlist('Product 1')">❤️</button>
+        </div>
+
+        <div class="product" id="product11">
+            <img src="https://img.freepik.com/premium-psd/picture-makeup-set-transparent-background_955584-54881.jpg" alt="Product 1" width="300px" height="190px">
+            <h3>Canon DSLR Camera</h3>
+            <p>$999.99</p>
+            <button class="add-to-cart" data-name="Canon DSLR Camera" data-price="999.99">Add to Cart</button>
+            <button class="add-to-wishlist" onclick="addToWishlist('Product 1')">❤️</button>
+        </div>
+        
+        <div class="product" id="product11">
+            <img src="https://ibacosmetics.com/cdn/shop/collections/Must_have_Upto_25_off_Banner-07_1200x1200_crop_center.webp?v=1719988257" alt="Product 1" width="300px" height="190px">
+            <h3>Canon DSLR Camera</h3>
+            <p>$999.99</p>
+            <button class="add-to-cart" data-name="Canon DSLR Camera" data-price="999.99">Add to Cart</button>
+            <button class="add-to-wishlist" onclick="addToWishlist('Product 1')">❤️</button>
+        </div>
+
+        <div class="product" id="product11">
+            <img src="https://media-cldnry.s-nbcnews.com/image/upload/rockcms/2024-06/240610-beauty-awards-2024-face-makeup-winners-vl-social-74fb90.jpg" alt="Product 1" width="300px" height="190px">
+            <h3>Canon DSLR Camera</h3>
+            <p>$999.99</p>
+            <button class="add-to-cart" data-name="Canon DSLR Camera" data-price="999.99">Add to Cart</button>
+            <button class="add-to-wishlist" onclick="addToWishlist('Product 1')">❤️</button>
+        </div>
+
+        <div class="product" id="product11">
+            <img src="https://swissbeauty.in/cdn/shop/files/800x540_1_1500x.png?v=1740594714" alt="Product 1" width="300px" height="190px">
+            <h3>Canon DSLR Camera</h3>
+            <p>$999.99</p>
+            <button class="add-to-cart" data-name="Canon DSLR Camera" data-price="999.99">Add to Cart</button>
+            <button class="add-to-wishlist" onclick="addToWishlist('Product 1')">❤️</button>
+        </div>
+
+        <div class="product" id="product11">
+            <img src="https://fashionmingle.com/wp-content/uploads/2021/07/beauty-4993472_1920-e1635781134472-888x467.jpg" alt="Product 1" width="300px" height="190px">
+            <h3>Canon DSLR Camera</h3>
+            <p>$999.99</p>
+            <button class="add-to-cart" data-name="Canon DSLR Camera" data-price="999.99">Add to Cart</button>
+            <button class="add-to-wishlist" onclick="addToWishlist('Product 1')">❤️</button>
+        </div>
+    </div>
+        
+
+         <!-- Cart Page -->
+    <section class="cart-page" id="cart-page">
+        <h2>Your Cart</h2>
+        <div id="cart-items"></div>
+        <div class="cart-total">Total: $<span id="total-price">0.00</span></div>
+        <button class="back" onclick="showShopPage()">⬅️ Continue Shopping</button>
+    </section>
+
+    <!-- Whishlist page-->
+    <section class="wishlist-page" id="wishlist-page">
+        <h2>Your Wishlist</h2>
+        <div id="wishlist-items"></div>
+        <button class="back" onclick="showShopPage()">⬅️ Continue Shopping</button>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Shop. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script> <!-- Link to external JS -->
+</body>
+</html>
